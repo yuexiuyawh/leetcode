@@ -2,7 +2,13 @@
 class Solution {
 public:
     int distributeCandies(vector<int>& candies) {
-        set<int> s;
+        return min(unordered_set<int>(candies.begin(),candies.end()).size(),candies.size()/2);
+    }
+};
+class Solution {
+public:
+    int distributeCandies(vector<int>& candies) {
+        unordered_set<int> s;
         for(int i=0;i<candies.size()&&s.size()<candies.size()/2;++i)
         {
             s.insert(candies[i]);
@@ -13,7 +19,7 @@ public:
 class Solution {
 public:
     int distributeCandies(vector<int>& candies) {
-        set<int> s;
+        unordered_set<int> s;
         for(int i=0;i<candies.size();++i)
         {
             s.insert(candies[i]);

@@ -45,3 +45,13 @@ public:
         }
     }
 };
+
+
+
+//正则表达式
+class Solution {
+public:
+    bool detectCapitalUse(string word) {
+        return regex_match(word,regex("[A-Z]+|[a-z]+|[A-Z][a-z]*"));
+    }
+};
